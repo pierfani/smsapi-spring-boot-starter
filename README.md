@@ -95,8 +95,7 @@ public class AuthenticationService {
 
 Ecco come potresti usare il servizio AuthenticationService in un controller Spring Boot per gestire le richieste di autenticazione:
 
-``` java
-
+```java
 package it.pierfani.smsapi.controller;
 
 import it.pierfani.smsapi.service.AuthenticationService;
