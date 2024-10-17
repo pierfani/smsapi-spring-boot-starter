@@ -7,5 +7,5 @@ public class CodeSendingRequest {
     private String phoneNumber;
     private String from;
     private String content;
-    private boolean fast = true;
+    private String fast;
 }
