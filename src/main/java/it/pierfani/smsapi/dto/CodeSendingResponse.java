@@ -6,6 +6,6 @@ import lombok.Data;
 public class CodeSendingResponse {
     private String id;
     private String code;
-    private String phoneNumber;
+    private String phone_number;
     private String from;
 }
