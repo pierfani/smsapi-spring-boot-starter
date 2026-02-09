@@ -1,11 +1,14 @@
 package it.pierfani.smsapi.dto;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import lombok.Data;
 
 @Data
 public class CodeSendingResponse {
     private String id;
     private String code;
-    private String phone_number;
+    @JsonProperty("phone_number")
+    private String phoneNumber;
     private String from;
 }

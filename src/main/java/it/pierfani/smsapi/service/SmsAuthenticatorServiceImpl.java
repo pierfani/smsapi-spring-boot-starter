@@ -1,6 +1,5 @@
 package it.pierfani.smsapi.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.stereotype.Service;
@@ -11,13 +10,14 @@ import it.pierfani.smsapi.dto.CodeSendingRequest;
 import it.pierfani.smsapi.dto.CodeSendingResponse;
 import it.pierfani.smsapi.dto.CodeVerificationRequest;
 import it.pierfani.smsapi.exception.SmsApiException;
+import lombok.RequiredArgsConstructor;
 import reactor.core.publisher.Mono;
 
 @Service
+@RequiredArgsConstructor
 public class SmsAuthenticatorServiceImpl implements SmsAuthenticatorService {
 
-    @Autowired
-    private WebClient smsApiWebClient;
+    private final WebClient smsApiWebClient;
 
     @Override
     public CodeSendingResponse sendCode(CodeSendingRequest request) throws SmsApiException {

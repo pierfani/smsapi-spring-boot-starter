@@ -1,15 +1,16 @@
 package it.pierfani.smsapi.config;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.reactive.function.client.WebClient;
 
+import lombok.RequiredArgsConstructor;
+
 @Configuration
+@RequiredArgsConstructor
 public class SmsApiWebClientConfig {
 
-    @Autowired
-    private SmsApiConfig smsApiConfig;
+    private final SmsApiConfig smsApiConfig;
 
     @Bean
     public WebClient smsApiWebClient() {
